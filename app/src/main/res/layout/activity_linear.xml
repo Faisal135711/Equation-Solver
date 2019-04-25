@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.myapplication.LinearActivity"
+    android:orientation="vertical"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/li1"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="#23282a"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="100dp"
+                    android:gravity="center"
+                    android:text="ax+b = 0"
+                    android:textColor="#fff"
+                    android:textSize="40dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/li2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/aId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="80dp"
+                        android:hint="Enter a:"
+                        android:backgroundTint="#ff22"
+                        android:inputType="numberSigned"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/li3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/OkButtonforA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="0dp"
+                        android:text="OK"
+                        android:textSize="20dp"
+                        android:background="#fe104d"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/li4"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/bId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="80dp"
+                        android:hint="Enter b:"
+                        android:backgroundTint="#ff22"
+                        android:inputType="numberSigned"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/li5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/OkButtonforB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:text="OK"
+                        android:textSize="20dp"
+                        android:background="#fe104d"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/li6"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/solveId"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solve"
+                    android:textSize="25dp"
+                    android:background="#283747"
+                    android:textColor="#fe104d"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/msgId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="30dp"
+                android:textColor="#ff22"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/rootShowId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/msgId"
+                android:textSize="50dp"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/newEquationId"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="New Equation"
+                android:textColor="@color/black"
+                android:background="#fe104d"
+                android:visibility="invisible"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                >
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/linearGraphId"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

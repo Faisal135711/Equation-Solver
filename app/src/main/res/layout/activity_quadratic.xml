@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.myapplication.quadratic">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/Ql1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#23282a"
+                >
+
+                <TextView
+                    android:id="@+id/B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="ax2+bx+c = 0"
+                    android:textColor="#fff"
+                    android:textSize="40dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:id="@+id/Ql2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/QuadCoeffInputId"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter  coefficient a:"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="#ff22"
+                        android:inputType="numberSigned"
+                        android:onClick="CoeffEntered"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Ql3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/CoeffOkId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="60dp"
+                        android:text="Ok"
+                        android:onClick="CoeffOk"
+                        android:background="@color/finalPink"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/NumOfCoeffEntered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Ql4"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:id="@+id/solveButtonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text="solve"
+                    android:onClick="SolvePressed"
+                    android:background="@color/finalPink"
+                    />
+                <TextView
+                    android:id="@+id/rootNumberMessageId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="25dp"
+                    android:layout_gravity="center"
+                    android:text=""
+                    />
+                <TextView
+                    android:id="@+id/finalmessageId"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text=""
+                    android:textColor="@color/blue"
+                    android:textSize="30dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/Ql5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Button
+                        android:id="@+id/previusRootButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prev"
+                        android:layout_marginLeft="30dp"
+                        android:background="@color/finalPink"
+                        android:onClick="PrevPressed"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Ql6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/nextRootButtonId"
+                        android:layout_below="@+id/solveButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Next"
+                        android:background="@color/finalPink"
+                        android:layout_marginLeft="120dp"
+                        android:onClick="NextPressed"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                >
+                <Button
+                    android:id="@+id/REPEAT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=" NEW EQUATION "
+                    android:onClick="ReInitialize"
+                    android:textColor="@color/black"
+                    android:background="@color/finalPink"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                >
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/QGraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

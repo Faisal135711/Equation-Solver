@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.myapplication.nonLinearActivity"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/nl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#23282a"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/Subscript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="00dp"
+                    android:layout_marginTop="80dp"
+                    android:gravity="center"
+                    android:text="ax+b = 0"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="00dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="n=Degree of the equation"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="00dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="X=Unknown variable"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="00dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="X=Unknown variable"
+                    android:textColor="#fff"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="00dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/nl2"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nonLinearDegreeInputId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:backgroundTint="#ff22"
+                        android:hint="Enter the degree:"
+                        android:inputType="numberSigned"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nl3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/degreeOkId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:background="@color/finalPink"
+                        android:text="Ok" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/nl4"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nonLinearCoefficientInputId"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nonLinearDegreeInputId"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="#ff22"
+                        android:hint="Enter the co-efficents"
+                        android:inputType="numberSigned"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nl5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/okButtonForCoefficientId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/finalPink"
+                        android:text="ok" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/NumOfCoeffEntered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/nl6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+                <Button
+                    android:id="@+id/solveButtonId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/finalPink"
+                    android:text="solve" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/rootNumberMessageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/red"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/finalmessageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+                android:textColor="@color/blue"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/nl7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/previusRootButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/finalPink"
+                        android:text="prev" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nl8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/nextRootButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/solveButtonId"
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/finalPink"
+                        android:text="Next" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                >
+                <Button
+                    android:id="@+id/REPEAT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/finalPink"
+                    android:onClick="ReInitialize"
+                    android:text="   NEW EQUATION    "
+                    android:textColor="@color/black"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

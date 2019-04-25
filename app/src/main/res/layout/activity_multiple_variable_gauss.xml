@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.myapplication.multipleVariableGauss">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ml1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#23282a"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="0dp"
+
+                    android:text="EQUATION 1:A11X1+A12X2+...+A1nXn = B1"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="0dp"
+
+                    android:text="EQUATION 2:A21X1+A22X2+...+A2nXn = B2"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text=".            .             .                     .      .         "
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text=".            .             .                     .      .         "
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:text=".            .             .                     .      .         "
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="EQUATION n:An1X1+An2X2+...+AnnXn = Bn"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="n=Number of variables"
+                    android:textColor="#fff"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="X1,X2...Xn=Unknown varibles"
+                    android:textColor="#fff"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="A1n,A2n...Ann=Coefficients of Unknown varibles"
+                    android:textColor="#fff"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="B1,B2...Bn=Last Coefficient of each equation "
+                    android:textColor="#fff"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="00dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ml2"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/multipleVariableDegreInputId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter number of variables"
+                        android:textColorHint="@color/black"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginLeft="20dp"
+                        android:backgroundTint="#ff22"
+                        android:onClick="DegreeTouched"
+                        android:inputType="number"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ml3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/multipleVariableDegreOkId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="Ok"
+                        android:onClick="DegreeOkPressed"
+                        android:background="@color/finalPink"
+                        android:layout_toRightOf="@id/multipleVariableDegreInputId"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ml4"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/multipleVariableCoeficientInputId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/multipleVariableDegreInputId"
+                        android:textColorHint="@color/black"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:inputType="numberSigned"
+                        android:onClick="CoeffTouched"
+                        android:width="270dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ml5"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/Buttoncoefficient"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/multipleVariableDegreInputId"
+                        android:layout_toRightOf="@id/multipleVariableCoeficientInputId"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="ok"
+                        android:onClick="CoeffOkPressed"
+                        android:background="@color/finalPink"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="20dp"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/ml6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/SolveEqn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="solve"
+                    android:onClick="SOLVE"
+                    android:background="@color/finalPink"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text=""
+                android:textStyle=""
+                android:textColor="@color/blue"
+                android:textSize="25dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ml7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Button
+                        android:id="@+id/Prev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="44dp"
+                        android:text="prev variable"
+                        android:onClick="PrevClicked"
+                        android:background="@color/finalPink"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ml8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/Next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/output"
+                        android:layout_toRightOf="@id/Prev"
+                        android:layout_marginLeft="60dp"
+                        android:text="next variable"
+                        android:onClick="NextClicked"
+                        android:background="@color/finalPink"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/NewEquation"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/finalPink"
+                android:text="New Equation"
+                android:layout_marginTop="40dp"
+                android:onClick="Reinitialize"
+                android:visibility="invisible"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"></LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

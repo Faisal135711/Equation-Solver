@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="linearEquationButtonText">Linear Equation</string>
+    <string name="nonLinearEquationButtonText">Polynomial Equation</string>
+    <string name="quadraticEquationButtonText">Quadratic Equation</string>
+    <string name="multipleVariableEquationButtonText">Multiple Variable Equation</string>
+    <string name="degree">Enter the degree of the equation</string>
+</resources>

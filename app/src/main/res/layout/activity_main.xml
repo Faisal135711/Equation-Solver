@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.myapplication.MainActivity"
+    android:background="@color/backgroud"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/appName"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equation Solver"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/linearButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/linearEquationButtonText"
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:background="@color/one"
+            android:cursorVisible="true"
+            />
+        <Space
+            android:id="@+id/firstspace"
+            android:layout_below="@+id/linearButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/l3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/nonLinearButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/nonLinearEquationButtonText"
+            android:textSize="20dp"
+            android:textColor="@color/blue"
+            android:background="@color/two"
+            />
+        <Space
+            android:id="@+id/secondspace"
+            android:layout_below="@+id/nonLinearButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/l4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/quadraticButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/quadraticEquationButtonText"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:background="@color/three"
+            android:onClick="GoToQuad"
+            />
+        <Space
+            android:id="@+id/thirdspace"
+            android:layout_below="@+id/quadraticButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/l5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="50dp"
+            android:id="@+id/multipleVariableButtonId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/multipleVariableEquationButtonText"
+            android:textSize="20dp"
+            android:background="@color/five"
+            android:textColor="@color/green"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
